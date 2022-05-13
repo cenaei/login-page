@@ -7,7 +7,7 @@
   <script src="https://kit.fontawesome.com/38a4aeacdd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <title>Login Page</title>
+  <title>Sign Up Page</title>
 </head>
 <body>
   <main class="main">
@@ -18,10 +18,14 @@
     </div>
     <div class="main__right">
       <div class="main__title">
-        <h1>Sign In</h1>
+        <h1>Sign Up</h1>
       </div>
       <div class="main__form">
         <form class="form">
+          <div class="form__name">
+            <label for="name">Full Name</label>
+            <input type="name" name="name" id="name" placeholder="Full Name" required>
+          </div>
           <div class="form__email">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Email Address" required>
@@ -30,12 +34,12 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Password" required>
           </div>
-          <button type="submit">Sign in</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
       <div class="main__create">
-        <p>New On Our Platform? </p>
-        <a href="sighup.html">Create an Account</a>
+        <p>Already Have an Account?</p>
+        <a href="#index.html">Sign In</a>
       </div>
       <div class="main__or">
         <p>or</p>

@@ -59,6 +59,9 @@
     &__password {
       @extend .form__email;
     }
+    &__name {
+      @extend .form__email;
+    }
   }
   &__create {
     @include flexCenter(row);

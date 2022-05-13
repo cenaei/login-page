@@ -177,7 +177,7 @@ a {
   color: white;
 }
 
-.main .form__email, .main .form__password {
+.main .form__email, .main .form__password, .main .form__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

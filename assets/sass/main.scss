@@ -1,0 +1,130 @@
+@import "reset";
+
+.main {
+  @include flex(row);
+  // max-width: 100vw;
+  // max-height: 100vh;
+  &__left {
+    background-color: $darkColor;
+    min-width: 70%;
+    min-height: 100vh;
+    figure {
+      @include flexCenter(column);
+      img {
+        height: 90vh;
+        width: 90vh;
+      }
+    }
+  }
+  &__right {
+    @include flexCenter(column);
+    background-color: $mainColor;
+    width: 100%;
+    padding: auto;
+  }
+  &__title {
+    h1 {
+      @include font(3.6rem, 500);
+      color: white;
+    }
+  }
+  .form {
+    @include flexCenter(column);
+    gap: 1.3rem;
+    margin: 2.2rem 0;
+    label {
+      @include font(1.7rem, 400);
+      color: white;
+    }
+    input {
+      border: 1px solid $gray;
+      border-radius: 1.1rem;
+      margin-top: 0.7rem;
+      color: white;
+      &::placeholder {
+        color: $gray;
+      }
+      &:focus {
+        border: 1px solid $orange;
+      }
+    }
+    button[type="submit"] {
+      width: 100%;
+      background-color: $orange;
+      color: white;
+    }
+    &__email {
+      @include flex(column);
+    }
+    &__password {
+      @extend .form__email;
+    }
+  }
+  &__create {
+    @include flexCenter(row);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    p {
+      @include font(1.4rem, 300);
+      color: white;
+    }
+    a {
+      color: $orange;
+      @include font(1.4rem, 300);
+    }
+  }
+
+  &__or {
+    @include font(1.6rem, 300);
+    margin-bottom: 1rem;
+    color: $gray;
+    position: relative;
+    display: block;
+    width: 50%;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: calc(50% - 2rem);
+      height: 0.1rem;
+      background-color: #00000023;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: calc(50% - 2rem);
+      height: 0.1rem;
+      background-color: #00000023;
+    }
+  }
+  &__social {
+    @include flexBetween(row);
+    gap: 2rem;
+    a {
+      color: white;
+      padding: 1rem;
+      font-size: 1.6rem;
+      border-radius: 1.2rem;
+    }
+    &--twitter {
+      background-color: #4242ff;
+    }
+    &--facebook {
+      background-color: #6ec9e7;
+    }
+    &--email {
+      background-color: #f18960;
+    }
+    &--github {
+      background-color: #817878;
+    }
+  }
+}

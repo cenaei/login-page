@@ -175,6 +175,15 @@ a {
   width: 100%;
   background-color: #FF4C29;
   color: white;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.main .form button[type="submit"]:hover {
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
 }
 
 .main .form__email, .main .form__password, .main .form__name {
@@ -274,6 +283,15 @@ a {
   padding: 1rem;
   font-size: 1.6rem;
   border-radius: 1.2rem;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.main__social a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .main__social--twitter {

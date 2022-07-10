@@ -52,6 +52,10 @@
       width: 100%;
       background-color: $orange;
       color: white;
+      transition: transform 300ms ease-in-out;
+      &:hover {
+        transform: scaleX(1.05);
+      }
     }
     &__email {
       @include flex(column);
@@ -116,6 +120,10 @@
       padding: 1rem;
       font-size: 1.6rem;
       border-radius: 1.2rem;
+      transition: transform 250ms ease-in-out;
+      &:hover {
+        transform: scale(1.1)
+      }
     }
     &--twitter {
       background-color: #4242ff;
